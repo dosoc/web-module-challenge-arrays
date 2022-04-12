@@ -168,9 +168,13 @@ Use the filterByWord function below to do the following:
 
 
 function filterByWord(arr, flavor){
-  let newArr = arr.filter(str => str.includes(flavor));
+  let newArr =[];
+  for (let i = 0; i < arr.length ; i++) {
+    if (arr[i].includes(flavor)){
+        newArr.push(arr[i]);
+    }
+  }
   return newArr;
-
 }
 
 
